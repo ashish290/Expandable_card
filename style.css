@@ -1,0 +1,64 @@
+ /* Font-Link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+
+:root {
+  --light-grey: #e2e3e6;
+  --dark-grey: #6c6c75;
+  --accent-color: rgb(185, 52, 134);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 16px;
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+}
+main {
+    width: 80vh;
+}
+.setting {
+    text-align: center;
+}
+.setting-tilte {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.panel {
+    margin: 10px;
+    background-color: var(--light-grey);
+    height: 48px;
+    width: 80vh;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.6),5px 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: flex 0.5s linear;
+    overflow: hidden;
+}
+.action {
+    height: 50vh;
+}
+.action.panel {
+    flex-grow: 5;
+}
+.action.panel .setting-tilte {
+    color: var(--accent-color);
+}
+.setting-content {
+    opacity: 0;
+    margin: 16px 20px;
+    line-height: 28px;
+    transition: opacity 0.2s ease-in;
+}
+.action.panel .setting-content {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.3s;
+}
